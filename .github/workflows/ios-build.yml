@@ -16,16 +16,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18.13'
-    - run: npm install -g @ionic/cli
-    - run: npm ci --legacy-peer-deps
-    - run: ionic build
     - name: Install CocoaPods
       run: sudo gem install cocoapods
-    - name: Install Node Modules for Capacitor
-      run: npm install @capacitor/cli @capacitor/ios
     - name: Prepare iOS Project
       run: |
-        ionic capacitor copy ios
+        cd ios/App
+        pod install
     - name: Build iOS
       run: |
         cd ios/App
