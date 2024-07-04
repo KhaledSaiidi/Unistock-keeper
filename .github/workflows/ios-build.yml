@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: '16'
     - run: npm install -g @ionic/cli
-    - run: npm ci
+    - run: npm ci --legacy-peer-deps
     - run: ionic build
     - name: Install CocoaPods
       run: sudo gem install cocoapods
