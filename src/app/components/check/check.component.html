@@ -1,0 +1,20 @@
+<div [ngStyle]="{'background': scanActive ? 'transparent' : '#fff'}">  
+  <div class="input-container text-center mt-3" [ngClass]="{ 'limited-height': scanActive }">
+    <h3 [hidden]="scanActive">Scanned Barcodes </h3>
+    <div class="col-md-8 input-wrapper" class="input-wrapper" *ngFor="let barcode of barcodes">
+      <input  [ngModel]="barcode" placeholder="Enter a Barcode" (ngModelChange)="onBarcodeChange($event, barcode)" class="form-control mt-2" type="text" style="margin-bottom: 3px;">                
+    </div>
+  </div>
+
+  <div class="scan-box" [hidden]="!scanActive">
+  </div>
+
+  <div class="button-container">
+    <div style="text-align: center;">
+      <button class="btn scan-btn add-btn" type="button" (click)="proceedCheck()">Check</button>
+      <button class="btn scan-btn add-btn" type="button" (click)="nextScan()">Next Item</button>
+      <button class="btn btn-danger" type="button" (click)="navigateTohome()">Cancel</button>
+    </div>
+  </div>
+
+</div>
