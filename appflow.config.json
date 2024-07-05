@@ -1,6 +1,5 @@
 {
-    "ios": {
-      "source": "ios/App/App.xcodeproj"
-    }
+  "ios": {
+    "source": "ios/App/App.xcodeproj/project.pbxproj"
   }
-  
+}
