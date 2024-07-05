@@ -3,7 +3,7 @@
   [
       {
           "appId": "2301ff22",
-          "root": "apps/Unistock-keeper",
+          "root": ".",
           "iosPath": "ios/App/App.xcodeproj/project.pbxproj"
       }
   ]
