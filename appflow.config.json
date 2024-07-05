@@ -4,7 +4,7 @@
       {
           "appId": "2301ff22",
           "root": ".",
-          "iosPath": "ios/App/App.xcodeproj/project.pbxproj"
+          "iosPath": "ios/App/App/AppDelegate.swift"
       }
   ]
 }
